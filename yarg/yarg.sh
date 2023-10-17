@@ -317,6 +317,7 @@ chmod 777 $temp/*.so 2>/dev/null
 mv $temp/* $pro/$appname/
 chmod a+x $pro/$appname/$appname 2>/dev/null
 cd $pro
+cp YARG.x86_64 yarg
 rm -rf $temp
 SIZE=$(du -sh $pro/$appname | awk '{print $1}') 2>/dev/null
 echo -e "${T}$pro/$appname  ${T}$SIZE( )  ${G}OK${W}" | sed 's/( )//g'
