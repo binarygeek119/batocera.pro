@@ -335,7 +335,7 @@ chmod a+x $launcher
 rm /userdata/system/pro/$appname/extra/command 2>/dev/null
 # --------------------------------------------------------------------
 # get icon
-extra=https://github.com/uureel/batocera.pro/raw/main/$appname/extra
+extra=https://github.com/binarygeek119/batocera.pro/raw/main/$appname/extra
 wget -q -O $pro/$appname/extra/icon.png $extra/icon.png
 # --------------------------------------------------------------------
 # -- prepare f1 - applications - app shortcut, 
