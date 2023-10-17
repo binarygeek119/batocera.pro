@@ -312,12 +312,13 @@ wget -q -O $pro/.dep/libselinux.so.1 $depurl/libselinux.so.1
 chmod a+x $pro/.dep/tar; cp $depurl/libselinux.so.1 /lib/ 2>/dev/null
 cd $temp
 unzip -a $temp/YARG_v0.11.1-Linux-x86_64.zip 
+cp YARG.x86_64 yarg
+chmod 777 $temp/yarg 2>/dev/null
 chmod 777 $temp/YARG.x86_64 2>/dev/null
 chmod 777 $temp/*.so 2>/dev/null
 mv $temp/* $pro/$appname/
 chmod a+x $pro/$appname/$appname 2>/dev/null
 cd $pro
-cp YARG.x86_64 yarg
 rm -rf $temp
 SIZE=$(du -sh $pro/$appname | awk '{print $1}') 2>/dev/null
 echo -e "${T}$pro/$appname  ${T}$SIZE( )  ${G}OK${W}" | sed 's/( )//g'
